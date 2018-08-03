@@ -8074,6 +8074,16 @@ AutoFilterDateElem.prototype.convertDateGroupItemToRange = function(oDateGroupIt
 	CHeaderFooter.prototype.setOddHeader = function (val) { this.oddHeader = val; };
 
 
+	function CHeaderFooterData(str) {
+		this.str = str;
+		//this.parser = null;
+
+		return this;
+	}
+
+	CHeaderFooterData.prototype.getStr = function () { return this.str; };
+	CHeaderFooterData.prototype.setStr = function (val) { this.str = val; };
+
 
 	//----------------------------------------------------------export----------------------------------------------------
 	var prot;
@@ -8273,4 +8283,5 @@ AutoFilterDateElem.prototype.convertDateGroupItemToRange = function(oDateGroupIt
 	prot["asc_setHeadings"] = prot.asc_setHeadings;
 
 	window["Asc"]["CHeaderFooter"] = window["Asc"].CHeaderFooter = CHeaderFooter;
+	window["Asc"]["CHeaderFooterData"] = window["Asc"].CHeaderFooterData = CHeaderFooterData;
 })(window);
